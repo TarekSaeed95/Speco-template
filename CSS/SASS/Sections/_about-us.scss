@@ -1,0 +1,27 @@
+@use "../vars/mixins" as * ;
+.about-us{
+    .section{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include unLargeMedia(){
+                flex-direction: column;
+            }
+            .text-area{
+                max-width: 50%;
+                @include unLargeMedia(){
+                    max-width: 90%;
+                }    
+                h3{
+                    font-size: 40px;
+                    color: var(--main-color);
+                    margin-bottom: 15px;
+                }
+                p{
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}

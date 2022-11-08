@@ -1,0 +1,106 @@
+@use "../vars/mixins" as * ;
+.timeline{
+    background-color:var(--sec-color);
+    .section{
+        .container{
+            position: relative;
+            .date-2018,.date-2016{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px;
+                border-radius: 5px;
+                background-color: var(--main-color);
+                color: #fff;
+                top: -70px;
+                }
+    
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 150px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--main-color);
+                    width: 1px;
+                    height: 90%;
+                    
+                }
+                .cards{
+                    display: flex;
+                    flex-direction: column;
+                    gap:20px;
+                    margin-top: 200px;
+                    align-items: center;
+                    position: relative;
+                    &:last-of-type{
+                        margin-top: 100px;
+                        @include breakpoint(xlarge){
+                            margin-top: 200px;
+                        }
+                    }
+                    .card{     
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 10px;
+                        position: relative;
+                        width: 530px;
+                        max-width: 100%;
+                        @include breakpoint(xlarge){
+                            &::after{
+                                content: "";
+                                width: 0px;
+                                height: 0px;
+                                border: 10px solid;
+                                top: 20px;
+                                position: absolute;
+                            }
+                            &::before{
+                                content: "";
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                border: 2px solid var(--main-color);
+                                position: absolute;
+                                top: 20px;
+                                background-color: #fff;
+                            }
+                            &.left{
+                                align-self: flex-start;
+                                &::after{
+                                    border-color: transparent transparent transparent #fff;
+                                    right: -20px;
+                                }
+                                &::before{
+                                    right:-50px;
+                                }
+                            }
+                            &.right{
+                                align-self:flex-end;
+                                
+                                &::after{
+                                    border-color: transparent #fff transparent transparent;
+                                    left: -20px;
+                                }
+                                &::before{
+                                    left:-50px;
+                                }
+                            }
+                        }
+                       
+                        h3{
+                            margin-bottom: 20px;
+                            color: var(--main-color);
+                        }
+                        p{
+                            color: rgb(159, 159, 159);
+                            line-height: 1.5;
+                         }
+                    }
+
+                }
+    
+            
+        }
+    }
+}

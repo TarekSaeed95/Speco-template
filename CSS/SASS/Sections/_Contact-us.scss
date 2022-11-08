@@ -1,0 +1,133 @@
+@use "../vars/mixins.scss" as * ;
+.contact-us{
+    background-image: url(/imgs/contact.png);
+    background-size: cover;
+    position: relative;
+
+
+    .overlay{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(255 255 255 / 42%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .section{
+        z-index: 3;
+        position: relative;
+
+
+        .container{
+            z-index: 333;
+            position: relative;
+    
+            .title{
+                &::before{
+                    background-color: white;
+                }
+            }
+            form{
+                position: relative;
+                margin-top: 100px;
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                @include smallScreens(){
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90%;
+                    margin: auto;
+
+                }
+                .left-area{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include breakpoint(mobile){
+                        width: 100%;
+                    }                    
+                    
+                    @include breakpoint(small){
+                        width: 100%;
+                    }
+                    input{
+                        padding: 10px;
+                        height: 45px;
+                        width: 400px;
+                        background-color: var(--sec-color);
+                        border: 1px solid var(--sec-color);
+                        outline: none;
+                        border-radius: 10px;
+                        @include breakpoint(mobile){
+                            width: 100%;
+                        }
+                        @include breakpoint(small){
+                            width: 100%;
+                        }
+                        @include breakpoint(med){
+                            width: 300px;
+                        }
+
+                        &:focus::placeholder {
+                            color: transparent;
+                            transition: .5s;
+                          }
+                    }
+                }
+                .right-area{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include breakpoint(mobile){
+                        width: 100%;
+                    }                    
+                    
+                    @include breakpoint(small){
+                        width: 100%;
+                    }
+                    textarea{
+                        width: 450px;
+                        height:calc(180px / 4)*3+20px;
+                        background-color: transparent;
+                        background-color: var(--sec-color);
+                        border: 1px solid var(--sec-color);
+                        outline: none;
+                        padding: 10px;
+                        border-radius: 10px;
+                        @include breakpoint(mobile){
+                            width: 100%;
+                        }
+                        @include breakpoint(small){
+                            width: 100%;
+                        }
+                        @include breakpoint(med){
+                            width: 300px;
+                        }
+                        &:focus::placeholder{
+                            color: transparent;
+                            transition: .5s;
+                        }
+                    }
+                    input[type=submit]{
+                        padding: 10px;
+                        height:calc(180px / 4);
+                        background-color: var(--main-color);
+                        color: #fff;
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}

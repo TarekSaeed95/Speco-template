@@ -1,0 +1,15 @@
+@use "./vars/mixins" as * ;
+@use "./Sections/global" ;
+@use "./components/setting-box" ;
+@use "./components/bullets";
+@use "./components/scroll";
+@use "./Sections/about-us";
+@use "./Sections/Contact-us";
+@use "./Sections/footer";
+@use "./Sections/landing";
+@use "./Sections/nav";
+@use "./Sections/our-gallery";
+@use "./Sections/Our-skills";
+@use "./Sections/Our-Features";
+@use "./Sections/Testimonials";
+@use "./Sections/timeline";

@@ -1,0 +1,93 @@
+@use "../vars/mixins" as *;
+.our-gallery{
+    background-color: #fff;
+    position: relative;
+    .overlay{
+        height: 100vh;
+        width: 100%;
+        background-color: #000000d4;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+        z-index: 10;
+        .start{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0px;
+            height: 0px;
+            border-radius: 20px;
+            transition: .3s;
+            max-width:90%;
+        }
+        .finished{
+            width: 800px;
+            height: 450px;
+            transition: .3s;
+        }
+        .deleted{
+            width: 1px;
+            height: 1px;
+            transition: .3s;
+
+        }
+        span{
+            position:fixed;
+            width:0px;
+            height:0px;
+            top:10px;
+            right:-40px;
+            background-color:var(--main-color);
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+            width: 30px;
+            height: 30px;
+            opacity:0;
+            transition: .3s;
+        }
+        .span-fade-in{
+            opacity: 1;
+            transition:2s;
+            @include smallScreens(){
+                display: none;
+            }
+        }
+    }
+    .section{
+        .container{
+            .cards{
+                display: grid;
+                gap: 30px;
+                grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+                margin-top: 100px;
+            }
+            .card{
+                background-color: var(--sec-color);
+                // padding: 5px;
+                display: flex;
+                align-items: center;
+                box-shadow: 1px 1px 8px 1px #a9a3a3;
+                border-radius: 5px;
+                transition: .3s;
+                overflow: hidden;
+                &:hover{
+                    scale: 1.2;
+                    @include breakpoint(mobile){
+                        scale: 1;
+                    }
+                }
+                img{
+                    max-width: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

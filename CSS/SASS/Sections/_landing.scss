@@ -1,0 +1,79 @@
+@use "../vars/mixins" as * ;
+.landing{
+    background-image: url(/imgs/01.jpg);
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    z-index:1;
+    .images{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 30px;
+        z-index: 1000;
+        li{
+            width: 30px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: var(--main-color);
+            opacity: .5;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            cursor: pointer;
+            @include breakpoint(mobile){
+                width: 20px;
+            }        
+            &.active,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .overlay{
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+
+    }
+    .intro-text{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        z-index: 3;
+        @include unLargeMedia()
+        {
+            width: 80%;
+        }        
+        h3{
+            font-size: 40px;
+            margin-bottom: 10px;
+            width: 100%;
+            color: #fff;
+            @include breakpoint(mobile){
+                font-size: 30px;
+            }        
+
+            span{
+                color: var(--main-color);
+            }
+        }
+        p{
+            color: #fff;
+            line-height: 1.6;
+            @include breakpoint(mobile){
+                font-size: 14px;
+            }        
+
+        }
+    }
+
+}
