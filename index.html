@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/Main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+    />
+
+    <title>Speco template</title>
+  </head>
+  <body>
+    <div class="landing">
+      <ul class="images">
+        <li data-img="/imgs/01.jpg" data-num="1"></li>
+        <li data-img="/imgs/02.jpg" data-num="2"></li>
+        <li data-img="/imgs/03.jpg" data-num="3"></li>
+        <li data-img="/imgs/04.jpg" data-num="4"></li>
+        <li data-img="/imgs/05.jpg" data-num="5"></li>
+      </ul>
+      <div class="overlay"></div>
+      <div class="nav">
+        <div class="container">
+          <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="links">
+            <ul class="left-links">
+              <li><a href="#about">about</a></li>
+              <li><a href="#skills">skills</a></li>
+              <li><a href="#gallery">gallery</a></li>
+            </ul>
+            <ul class="right-links">
+              <li><a href="#timeline">timeline</a></li>
+              <li><a href="#features">features</a></li>
+              <li><a href="#tesimonials">tesimonials</a></li>
+            </ul>
+          </div>
+          <div class="logo">
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
+        </div>
+      </div>
+      <div class="intro-text">
+        <h3>We Are <span>Creative</span> Agency</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          odit nihil ullam nesciunt quidem iste
+        </p>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="setting-box">
+      <div class="gear">
+        <div class="icon-holder"><i class="fa-solid fa-gear icon"></i></div>
+      </div>
+      <div class="colors">
+        <p>colors</p>
+        <ul>
+          <li data-color="#f37023"></li>
+          <li data-color="#0eb24e"></li>
+          <li data-color="#0087d2"></li>
+          <li data-color="#00bcd4"></li>
+          <li data-color="#ff414d"></li>
+        </ul>
+      </div>
+      <div class="randomize">
+        <p>random backgrounds</p>
+        <span class="holder"><span class="ball"></span></span>
+        <!-- <span class="active">yes</span>
+            <span>no</span> -->
+      </div>
+      <div class="bullets-show">
+        <p>show bullets</p>
+        <span class="holder"><span class="ball"></span></span>
+        <!-- <span class="active">yes</span>
+        <span>no</span> -->
+      </div>
+      <div class="reset">reset options</div>
+    </div>
+    <!-- ##################### -->
+    <div class="bullets">
+      <ul>
+        <li data-link="about" id="#about"><a href="#about"></a></li>
+        <li data-link="skills" id="#skills"><a href="#skills"></a></li>
+        <li data-link="gallery"><a href="#gallery"></a></li>
+        <li data-link="timeline"><a href="#timeline"></a></li>
+        <li data-link="features"><a href="#features"></a></li>
+        <li data-link="tesimonials"><a href="#tesimonials"></a></li>
+      </ul>
+    </div>
+    <div class="about-us" id="about">
+      <div class="section">
+        <div class="container">
+          <div class="text-area">
+            <h3>about us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
+              maiores! Sit aspernatur nemo est excepturi vel ab fuga ipsum,
+              aliquam aliquid, facilis dolores nesciunt molestias! Omnis officia
+              cumque necessitatibus placeat.
+            </p>
+          </div>
+          <div class="img"><img src="/imgs/about-us.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="our-skills" id="skills">
+      <div class="section">
+        <div class="container">
+          <div class="title">Our skills</div>
+          <div class="skills">
+            <div class="skill">
+              <p>HTML</p>
+              <span class="parent-span" data-progress="90%">
+                <span class="progress"></span>
+              </span>
+            </div>
+            <div class="skill">
+              <p>CSS</p>
+              <span class="parent-span" data-progress="80%">
+                <span class="progress"></span>
+              </span>
+            </div>
+            <div class="skill">
+              <p>JavaScript</p>
+              <span class="parent-span" data-progress="70%">
+                <span class="progress"></span>
+              </span>
+            </div>
+            <div class="skill">
+              <p>Python</p>
+              <span class="parent-span" data-progress="85%">
+                <span class="progress"></span>
+              </span>
+            </div>
+            <div class="skill">
+              <p>PHP</p>
+              <span class="parent-span" data-progress="70%">
+                <span class="progress"></span>
+              </span>
+            </div>
+            <div class="skill">
+              <p>MySQL</p>
+              <span class="parent-span" data-progress="90%">
+                <span class="progress"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="our-gallery" id="gallery">
+      <div class="overlay"></div>
+      <div class="section">
+        <div class="container">
+          <div class="title">Our Gallery</div>
+          <div class="cards">
+            <div class="card" id="card">
+              <img src="/imgs/01.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/02.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/03.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/04.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/05.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/06.png" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/07.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/08.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/09.jpg" alt="" />
+            </div>
+            <div class="card" id="card">
+              <img src="/imgs/10.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="timeline" id="timeline">
+      <div class="section">
+        <div class="container">
+          <div class="title">timeline</div>
+          <div class="cards">
+            <span class="date-2018">2018</span>
+            <div class="card left">
+              <h3>testing heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                nam molestiae soluta iste fugiat facere quod fugit? Delectus
+                recusandae, molestiae mollitia ullam ducimus quibusdam voluptas,
+                tempore quam assumenda vel enim?
+              </p>
+            </div>
+            <div class="card right">
+              <h3>testing heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                nam molestiae soluta iste fugiat facere quod fugit? Delectus
+                recusandae, molestiae mollitia ullam ducimus quibusdam voluptas,
+                tempore quam assumenda vel enim?
+              </p>
+            </div>
+          </div>
+          <div class="cards">
+            <span class="date-2016">2016</span>
+            <div class="card left">
+              <h3>testing heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                nam molestiae soluta iste fugiat facere quod fugit? Delectus
+                recusandae, molestiae mollitia ullam ducimus quibusdam voluptas,
+                tempore quam assumenda vel enim?
+              </p>
+            </div>
+            <div class="card left">
+              <h3>testing heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                nam molestiae soluta iste fugiat facere quod fugit? Delectus
+                recusandae, molestiae mollitia ullam ducimus quibusdam voluptas,
+                tempore quam assumenda vel enim?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="our-features" id="features">
+      <div class="section">
+        <div class="container">
+          <div class="title">our features</div>
+          <div class="feats">
+            <div class="feat">
+              <img src="/imgs/programming.svg" alt="" />
+              <p class="head">development</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+            <div class="feat">
+              <img src="/imgs/1738646.png" alt="" />
+              <p class="head">Marketing</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+            <div class="feat">
+              <img src="/imgs/hosting-icon.svg" alt="" />
+              <p class="head">Hosting</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+            <div class="feat">
+              <img src="/imgs/mobile-app.svg" alt="" />
+              <p class="head">Mobile Develope</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+            <div class="feat">
+              <img src="/imgs/graphic-design.svg" alt="" />
+              <p class="head">Cloud and Servers</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+            <div class="feat">
+              <img src="/imgs/web-design.svg" alt="" />
+              <p class="head">Seo</p>
+              <p>
+                We are professional marketeers, we will do anything you imagine
+                in no time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="testimonials" id="tesimonials">
+      <div class="left-area"></div>
+      <div class="right-area"></div>
+      <div class="section">
+        <div class="container">
+          <h3 class="head">testimonials</h3>
+          <div class="profiles">
+            <div class="profile">
+              <p>
+                Iam very happy with the product its amazing and i recieve it
+                very fast and the price was amazing.
+              </p>
+              <p>Ahmed Mosaad</p>
+              <p>valU CEO</p>
+            </div>
+            <div class="profile">
+              <p>
+                Iam very happy with the product its amazing and i recieve it
+                very fast and the price was amazing.
+              </p>
+              <p>Sherief Ashraf</p>
+              <p>uber technical manager</p>
+            </div>
+            <div class="profile">
+              <p>
+                Iam very happy with the product its amazing and i recieve it
+                very fast and the price was amazing.
+              </p>
+              <p>Mohamed Ibrahim</p>
+              <p>HSBC Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="contact-us">
+      <div class="overlay"></div>
+
+      <div class="section">
+        <div class="container">
+          <div class="title">Contact Us</div>
+          <form action="">
+            <div class="left-area">
+              <input type="text" placeholder="your name" />
+              <input type="text" placeholder="your phone" />
+              <input type="email" placeholder="your email" />
+              <input type="text" placeholder="subject" />
+            </div>
+            <div class="right-area">
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="your message"
+              ></textarea>
+              <input type="submit" value="send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ##################### -->
+    <div class="footer">done by <span>Tarek</span></div>
+    <script src="JS/all.min.js"></script>
+    <script type="module" src="/JS/Main.js"></script>
+  </body>
+</html>
