@@ -1,0 +1,84 @@
+@use "./vars/mixins" as * ;
+
+:root{
+    --main-color:#f37023;
+    --sec-color:#e9e9e9;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    @include prefix(box-sizing,border-box);
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.container{
+    margin: auto;
+    background-color: inherit;
+    @include breakpoint(mobile){
+        width: 100%;
+        padding: 15px;
+    }
+    @include breakpoint(small){
+        width: 540px;
+    }
+    @include breakpoint(med){
+        width: 720px;
+    }
+    @include breakpoint(large){
+        width: 960px;
+    }
+    @include breakpoint(xlarge){
+        width: 1140px;
+    }
+}
+.section{
+    padding:50px 0px;
+    background-color: inherit;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0px auto 50px;
+    width: fit-content;
+    position: relative;
+    background-color: inherit;
+
+    &::after{
+        content: "";
+        width:140px;
+        height: 2px;
+        background-color:var(--main-color);
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::before{
+        content: "";
+        width:14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color:inherit ;
+        border: 2px solid var(--main-color);
+        z-index: 3;
+        position: absolute;
+        bottom: -37px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: inherit;
+
+    }
+}
+.glassy{
+    background: linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,0));
+    backdrop-filter: blur(20px);
+    padding: 20px 30px;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 8px 32px 0 rgba(255,255,255,.37);
+    border-radius: 32px;
+    justify-content: center;
+}

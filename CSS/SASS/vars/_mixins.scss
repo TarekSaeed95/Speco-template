@@ -1,0 +1,41 @@
+@mixin breakpoint($media) {
+    @if $media==mobile{
+    @media (max-width: 575px){
+    @content;}
+}
+    @else if $media==small{
+    @media (min-width: 576px) and (max-width: 767px){
+    @content;}
+}
+    @else if $media==med{
+    @media (min-width: 768px) and (max-width: 991px){
+    @content;}
+}
+    @else if $media==large{
+    @media (min-width: 992px)and (max-width: 1199px){
+    @content;}
+}
+    @else if $media==xlarge{
+    @media (min-width: 1200px){
+    @content;}
+}
+}
+@mixin prefix($prop,$value) {
+    #{"-webkit-"+$prop}:$value;
+    #{"-o-"+$prop}:$value;
+    #{"-moz-"+$prop}:$value;
+    #{$prop}:$value
+    
+}
+@mixin unLargeMedia(){
+    @media (max-width: 991px){
+        @content;}
+}
+@mixin smallScreens(){
+    @media (max-width: 767px){
+        @content;}
+}
+@mixin bigScreens(){
+    @media (min-width: 768px){
+        @content;}
+}

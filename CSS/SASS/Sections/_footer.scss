@@ -1,0 +1,15 @@
+.footer{
+    width: 100%;
+    margin: 100px 0 0px;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    span{
+        font-style: italic;
+        color: var(--main-color);
+        font-weight: bold;
+        font-size:25px;
+    }
+}

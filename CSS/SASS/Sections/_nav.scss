@@ -1,0 +1,127 @@
+@use "./vars/mixins" as * ;
+.nav {
+    // background-color: transparent ;
+    z-index: 999;
+    position: relative;
+    color: #fff;
+
+    .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 999;
+    position: relative;
+    .links{
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        display: flex;
+        @include smallScreens(){
+            display: flex;
+            opacity: 0;
+            height: fit-content;
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-direction: column;
+            gap: 15px;
+            background: linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,0));
+            backdrop-filter: blur(20px);
+            padding: 20px 30px;
+            border: 1px solid rgba(255,255,255,.18);
+            box-shadow: 0 8px 32px 0 rgba(255,255,255,.37);
+            border-radius: 32px;
+            transition: .5s;
+            width: 90%;
+            &.show{
+                display: flex;
+                opacity: 1;
+            }
+        }
+    }
+        .logo{
+            width: 70px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 15px;
+            @include smallScreens(){
+
+            position: relative;
+            left: 0;
+            top: 0%;
+            transform: translate(0);
+            order: -1;
+            }
+               svg{ color: #fff;
+                font-size: 60px;
+                @include smallScreens(){
+                    font-size: 40px;
+                }            
+                &:hover{
+                    color: var(--main-color);
+                    transition: .5s;
+                }
+            }
+        }
+        .toggle{
+            display: none;
+            width: 70px;
+            cursor: pointer;
+            position:absolute;
+            right: 15px;
+
+            @include smallScreens(){
+                display: block;
+                &:hover ~ .links{
+                    display: flex;
+                    opacity: 1;
+                }
+                &:hover ~ .links ul{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+    
+            }
+               svg{ 
+                color: #fff;
+                font-size: 24px;  
+                &:hover{
+                    color: var(--main-color);
+                    transition: .5s;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            @include bigScreens(){
+                background: linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,0));
+                backdrop-filter: blur(20px);
+                padding: 20px 30px;
+                border: 1px solid rgba(255,255,255,.18);
+                box-shadow: 0 8px 32px 0 rgba(255,255,255,.37);
+                border-radius: 32px;
+                }  
+            @include smallScreens(){
+                flex-direction: column;
+            }            
+            a{
+                color: #fff;
+                transition: .5s;
+
+                &:hover
+                {
+                    color: var(--main-color);
+                }
+            }
+
+        }
+    }
+}

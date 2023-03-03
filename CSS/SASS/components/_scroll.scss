@@ -1,0 +1,14 @@
+body{
+    overflow: overlay;
+    color: black;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    width: 10px;
+    border: 60px solid var(--main-color)
+}
+
